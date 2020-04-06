@@ -36,8 +36,9 @@ Make sure to upload file as form data.
 
 ## Next Steps/ ISSUES
 
-Remove unwanted files/code. <br />
+Enable CORS (Currently tested using POSTMAN) <br />
 Use filter to accept only certain types of files.
+
 
 
 ## Suggestions

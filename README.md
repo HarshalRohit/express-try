@@ -12,16 +12,15 @@ The app accepts a file and stores it locally.
 
 ## Features
 
-Receive a file. <br/ >
-Save the file with original name (name on the machine from where file was uploaded). <br/ >
+Receive a file. <br />
+Save the file with original name (name on the machine from where file was uploaded). <br />
 Send error if upload file's size exceed the limit
 
 
 ## Usage
 
 In the project directory, you can run:
-
-### `PORT=3020 DEBUG=express-try:* npm start`
+ `PORT=3020 DEBUG=express-try:* npm start`
 
 Runs the app in the development mode. <br />
 Open [http://localhost:3020](http://localhost:3020) to view it in the browser. <br />
@@ -30,7 +29,7 @@ Change the `PORT` accordingly or remove if not required.
 
 ### Upload URL
 
-Endpoint: '/upload'. <br/ >
+Endpoint: '/upload'. <br />
 Make sure to upload file as form data.
 
 

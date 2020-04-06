@@ -20,10 +20,11 @@ Send error if upload file's size exceed the limit
 ## Usage
 
 In the project directory, you can run:
+
  `PORT=3020 DEBUG=express-try:* npm start`
 
 Runs the app in the development mode. <br />
-Open [http://localhost:3020](http://localhost:3020) to view it in the browser. <br />
+Open [http://localhost:3020] to view it in the browser. <br />
 Change the `PORT` accordingly or remove if not required.
 
 

@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-// 
+/* MY CODE STARTS */
 const multer  = require('multer');
-// 
+/*  MY CODE ENDS  */
 
 
-// 
+/* MY CODE STARTS */
 var storage = multer.diskStorage({ 
   destination: function (req, file, cb) { 
 
@@ -14,7 +14,10 @@ var storage = multer.diskStorage({
       cb(null, __dirname + "/../uploads") 
   }, 
   filename: function (req, file, cb) { 
-    cb(null, file.originalname) 
+    const date = new Date()
+    const fileName = req.hostname + ' - ' + date.toGMTString() + '.wav'
+    // file.originalname)
+    cb(null, fileName) 
   } 
 });
 
@@ -23,7 +26,7 @@ const limits = {fileSize: 1 * 1000 * 1000}
 var upload = multer({ storage: storage,
                       limits: limits 
                     }).single('avatar');
-// 
+/*  MY CODE ENDS  */
 
 
 
@@ -49,18 +52,30 @@ router.post('/', function(req, res, next) {
 });
 */
 
+
+/* MY CODE STARTS */
 router.post('/upload', function(req, res, next){
   upload(req, res, function(err){
+
+    /*let i=0;
+    for(i=0; i<10000000000; i++){
+
+    }
+    console.log(i);*/
+    
     if(err instanceof multer.MulterError){
-      res.send({errorType: "MulterError", err: err})
+
+      res./*status(404).*/send({errorType: "MulterError", err: err})
     } else if(err){
-      res.send({errorType: "Unknown"})
+      res./*status(404).*/send({errorType: "Unknown", err: err})
     } else{
-      res.send(req.file)
+      res.send({status: "File received."})
     }
 
   });
 
 });
+/*  MY CODE ENDS  */
+
 
 module.exports = router;

@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+/* MY CODE STARTS */
+var cors = require('cors')
+/*  MY CODE ENDS  */
+
 
 var indexRouter = require('./routes/index');
 
@@ -19,6 +23,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+/* MY CODE STARTS */
+var corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) chok
+};
+
+app.use(cors(corsOptions));
+/*  MY CODE ENDS  */
 
 
 app.use('/', indexRouter);

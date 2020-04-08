@@ -14,7 +14,8 @@ The app accepts a file and stores it locally.
 
 Receive a file. <br />
 Save the file with original name (name on the machine from where file was uploaded). <br />
-Send error if upload file's size exceed the limit
+Send error if upload file's size exceed the limit. <br />
+CORS functionality for whole app.
 
 
 ## Usage
@@ -36,8 +37,9 @@ Make sure to upload file as form data.
 
 ## Next Steps/ ISSUES
 
-Enable CORS (Currently tested using POSTMAN) <br />
-Use filter to accept only certain types of files.
+Fine-grained CORS functionality <br />
+Use filter to accept only certain types of files. <br />
+Detailed response code and messages.
 
 
 

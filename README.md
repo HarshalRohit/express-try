@@ -29,7 +29,9 @@ Open [http://localhost:3020] to view it in the browser. <br />
 Change the `PORT` accordingly or remove if not required.
 
 #### Note:
-Run `npm install` to download all the required modules.
+- Run `npm install` to download all the required modules.
+- Make sure **uploads** directory is present in root folder
+
 
 ### Upload URL
 
